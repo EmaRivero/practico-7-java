@@ -132,4 +132,20 @@ public class Practico5 {
         System.out.println(p2);
         System.out.println(p3);
     }
+    
+    public static void ejercicio6() {
+        System.out.println("===== EJERCICIO 6 =====");
+        Ejercicio6.Mesa m1 = new Ejercicio6.Mesa(1, 4);
+        Ejercicio6.Mesa m2 = new Ejercicio6.Mesa(2, 2);
+        Ejercicio6.Mesa m3 = new Ejercicio6.Mesa(3, 6);
+        Ejercicio6.Cliente c1 = new Ejercicio6.Cliente("Emmanuel Rivero",   "11-2222-3333");
+        Ejercicio6.Cliente c2 = new Ejercicio6.Cliente("Pepe Gómez",  "11-4444-5555");
+        Ejercicio6.Cliente c3 = new Ejercicio6.Cliente("Mauricio Gomez",  "11-6666-7777");
+        Ejercicio6.Reserva r1 = new Ejercicio6.Reserva("2025-09-20", "20:30", c1, m1);
+        Ejercicio6.Reserva r2 = new Ejercicio6.Reserva("2025-09-21", "21:00", c2, m2);
+        Ejercicio6.Reserva r3 = new Ejercicio6.Reserva("2025-09-22", "21:30", c3, m3);
+        System.out.println(r1);
+        System.out.println(r2);
+        System.out.println(r3);
+    }
 }
