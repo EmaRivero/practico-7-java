@@ -1,0 +1,57 @@
+package Ejercicio2;
+
+/**
+ *
+ * @author emmanuelrivero
+ */
+public class Celular {
+    private String imei;
+    private String marca;
+    private String modelo;
+    private Bateria bateria;
+    private Usuario usuario;
+
+    public Celular(String imei, String marca, String modelo) {
+        this.imei = imei;
+        this.marca = marca;
+        this.modelo = modelo;
+    }
+
+    public String getImei() { 
+        return imei; 
+    }
+    
+    public String getMarca() { 
+        return marca; 
+    }
+    
+    public String getModelo() { 
+        return modelo; 
+    }
+
+    public Bateria getBateria() { 
+        return bateria; 
+    }
+    
+    public void setBateria(Bateria bateria) { 
+        this.bateria = bateria; 
+    }
+
+    public Usuario getUsuario() { 
+        return usuario; 
+    }
+    
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+        if (usuario != null && usuario.getCelular() != this) {
+            usuario.setCelular(this);
+        }
+    }
+
+    @Override
+    public String toString() {
+        String usr = (usuario != null) ? usuario.getNombre() + " (" + usuario.getDni() + ")" : "—";
+        return "Celular{imei='" + imei + "', marca='" + marca + "', modelo='" + modelo +
+               "', bateria=" + bateria + ", usuario=" + usr + "}";
+    }
+}

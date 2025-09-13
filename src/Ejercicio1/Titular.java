@@ -27,7 +27,7 @@ public class Titular {
 
     @Override
     public String toString() {
-        return "Titular{nombre='" + nombre + "', dni='" + dni + "'}";
+        return "Titular{" + "nombre=" + nombre + ", dni=" + dni + '}';
     }
 }
 
