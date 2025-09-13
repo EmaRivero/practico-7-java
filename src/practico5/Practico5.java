@@ -6,6 +6,9 @@ import Ejercicio1.Titular;
 import Ejercicio2.Bateria;
 import Ejercicio2.Celular;
 import Ejercicio2.Usuario;
+import Ejercicio3.Autor;
+import Ejercicio3.Editorial;
+import Ejercicio3.Libro;
 
 /**
  *
@@ -15,6 +18,7 @@ public class Practico5 {
     public static void main(String[] args) {
         ejercicio1();
         ejercicio2();
+        ejercicio3();
     }
     
     public static void ejercicio1() {
@@ -43,22 +47,18 @@ public class Practico5 {
     public static void ejercicio2() {
         System.out.println("===== EJERCICIO 2 =====");
 
-        // Baterías (agregación)
         Bateria b1 = new Bateria("BN-100", 4000);
         Bateria b2 = new Bateria("BN-200", 5000);
         Bateria b3 = new Bateria("BN-300", 4500);
 
-        // Celulares
         Celular c1 = new Celular("IMEI-001", "Samsung", "S22");
         Celular c2 = new Celular("IMEI-002", "Apple",   "iPhone 14");
         Celular c3 = new Celular("IMEI-003", "Xiaomi",  "Mi 12");
 
-        // Asignar baterías (agregación: set simple)
         c1.setBateria(b1);
         c2.setBateria(b2);
         c3.setBateria(b3);
 
-        // Usuarios (bidireccional 1↔1, patrón simple con guardas)
         Usuario u1 = new Usuario("Emmanuel Rivero",  "31.111.222");
         Usuario u2 = new Usuario("Albahaca Rivero", "32.222.333");
         Usuario u3 = new Usuario("María Eugenia Conte", "33.333.444");
@@ -74,5 +74,25 @@ public class Practico5 {
         System.out.println(u1);
         System.out.println(u2);
         System.out.println(u3);
+    }
+    
+    public static void ejercicio3() {
+        System.out.println("===== EJERCICIO 3 =====");
+
+        Autor a1 = new Autor("Julio Cortázar", "Argentina");
+        Autor a2 = new Autor("Isabel Allende", "Chile");
+        Autor a3 = new Autor("Haruki Murakami", "Japón");
+
+        Editorial e1 = new Editorial("Alfaguara", "Av. Siempre Viva 123");
+        Editorial e2 = new Editorial("Planeta", "Calle Falsa 456");
+        Editorial e3 = new Editorial("Tusquets","Boulevard 789");
+
+        Libro l1 = new Libro("Rayuela", "ISBN-001", a1, e1);
+        Libro l2 = new Libro("La casa de los espíritus", "ISBN-002", a2, e2);
+        Libro l3 = new Libro("Kafka en la orilla", "ISBN-003", a3, e3);
+
+        System.out.println(l1);
+        System.out.println(l2);
+        System.out.println(l3);
     }
 }
