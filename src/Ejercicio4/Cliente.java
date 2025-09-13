@@ -34,7 +34,6 @@ public class Cliente {
 
     @Override
     public String toString() {
-        String nro = (tarjeta != null) ? tarjeta.getNumero() : "—";
-        return "Cliente{nombre='" + nombre + "', dni='" + dni + "', tarjeta=" + nro + "}";
+        return "Cliente{nombre='" + nombre + "', dni='" + dni + "', tarjeta=" + tarjeta.getNumero() + "}";
     }
 }

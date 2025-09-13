@@ -35,8 +35,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        String imei = (celular != null) ? celular.getImei() : "—";
-        return "Usuario{nombre='" + nombre + "', dni='" + dni + "', celular=" + imei + "}";
+        return "Usuario{nombre='" + nombre + "', dni='" + dni + "', celular=" + celular.getImei() + "}";
     }
 }
 

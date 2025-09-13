@@ -50,8 +50,7 @@ public class Celular {
 
     @Override
     public String toString() {
-        String usr = (usuario != null) ? usuario.getNombre() + " (" + usuario.getDni() + ")" : "—";
         return "Celular{imei='" + imei + "', marca='" + marca + "', modelo='" + modelo +
-               "', bateria=" + bateria + ", usuario=" + usr + "}";
+               "', bateria=" + bateria + ", usuario=" + usuario + "}";
     }
 }

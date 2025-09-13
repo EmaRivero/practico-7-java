@@ -37,8 +37,7 @@ public class TarjetaDeCredito {
 
     @Override
     public String toString() {
-        String cli = (cliente != null) ? cliente.getNombre() + " (" + cliente.getDni() + ")" : "—";
         return "TarjetaDeCredito{numero='" + numero + "', venc='" + fechaVencimiento +
-               "', banco=" + banco + ", cliente=" + cli + "}";
+               "', banco=" + banco + ", cliente=" + cliente.getNombre() + "}";
     }
 }
