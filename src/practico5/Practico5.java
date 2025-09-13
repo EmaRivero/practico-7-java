@@ -9,6 +9,9 @@ import Ejercicio2.Usuario;
 import Ejercicio3.Autor;
 import Ejercicio3.Editorial;
 import Ejercicio3.Libro;
+import Ejercicio4.Banco;
+import Ejercicio4.Cliente;
+import Ejercicio4.TarjetaDeCredito;
 
 /**
  *
@@ -19,6 +22,7 @@ public class Practico5 {
         ejercicio1();
         ejercicio2();
         ejercicio3();
+        ejercicio4();
     }
     
     public static void ejercicio1() {
@@ -94,5 +98,33 @@ public class Practico5 {
         System.out.println(l1);
         System.out.println(l2);
         System.out.println(l3);
+    }
+    
+    public static void ejercicio4() {
+        System.out.println("===== EJERCICIO 4 =====");
+
+        Banco b1 = new Banco("Banco Río", "30-11111111-9");
+        Banco b2 = new Banco("Banco Nación", "30-22222222-7");
+        Banco b3 = new Banco("Banco Galicia", "30-33333333-5");
+
+        TarjetaDeCredito t1 = new TarjetaDeCredito("4509 1234 5678 0001", "12/27", b1);
+        TarjetaDeCredito t2 = new TarjetaDeCredito("4509 1234 5678 0002", "08/26", b2);
+        TarjetaDeCredito t3 = new TarjetaDeCredito("4509 1234 5678 0003", "05/28", b3);
+
+        Cliente c1 = new Cliente("Emmanuel Rivero", "30.111.222");
+        Cliente c2 = new Cliente("Menta Rivero",    "30.999.888");
+        Cliente c3 = new Cliente("María E. Conte",  "28.987.654");
+
+        t1.setCliente(c1);
+        t2.setCliente(c2);
+        t3.setCliente(c3);
+
+        System.out.println(t1);
+        System.out.println(t2);
+        System.out.println(t3);
+
+        System.out.println(c1);
+        System.out.println(c2);
+        System.out.println(c3);
     }
 }
