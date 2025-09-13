@@ -27,6 +27,8 @@ public class Practico5 {
         ejercicio3();
         ejercicio4();
         ejercicio5();
+        ejercicio6();
+        ejercicio7();
     }
     
     public static void ejercicio1() {
@@ -147,5 +149,27 @@ public class Practico5 {
         System.out.println(r1);
         System.out.println(r2);
         System.out.println(r3);
+    }
+    
+    public static void ejercicio7() {
+        System.out.println("===== EJERCICIO 7 =====");
+        Ejercicio7.Motor m1 = new Ejercicio7.Motor("Nafta", "M-0001");
+        Ejercicio7.Motor m2 = new Ejercicio7.Motor("Eléctrico", "M-0002");
+        Ejercicio7.Motor m3 = new Ejercicio7.Motor("Diésel", "M-0003");
+        Ejercicio7.Vehiculo v1 = new Ejercicio7.Vehiculo("AB123CD", "Ford Focus", m1);
+        Ejercicio7.Vehiculo v2 = new Ejercicio7.Vehiculo("AC234DE", "Tesla Model 3", m2);
+        Ejercicio7.Vehiculo v3 = new Ejercicio7.Vehiculo("AD345EF", "Hilux", m3);
+        Ejercicio7.Conductor c1 = new Ejercicio7.Conductor("Emmanuel Rivero", "B123456");
+        Ejercicio7.Conductor c2 = new Ejercicio7.Conductor("Albahaca Rivero", "B654321");
+        Ejercicio7.Conductor c3 = new Ejercicio7.Conductor("María E. Conte", "C777777");
+        v1.setConductor(c1);
+        v2.setConductor(c2);
+        v3.setConductor(c3);
+        System.out.println(v1);
+        System.out.println(v2);
+        System.out.println(v3);
+        System.out.println(c1);
+        System.out.println(c2);
+        System.out.println(c3);
     }
 }
