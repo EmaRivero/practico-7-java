@@ -3,6 +3,11 @@ package practico5;
 import Ejercicio1.Foto;
 import Ejercicio1.Pasaporte;
 import Ejercicio1.Titular;
+import Ejercicio10.ClaveSeguridad;
+import Ejercicio10.CuentaBancaria;
+import Ejercicio11.Artista;
+import Ejercicio11.Cancion;
+import Ejercicio11.Reproductor;
 import Ejercicio2.Bateria;
 import Ejercicio2.Celular;
 import Ejercicio2.Usuario;
@@ -41,6 +46,8 @@ public class Practico5 {
         ejercicio7();
         ejercicio8();
         ejercicio9();
+        ejercicio10();
+        ejercicio11();
     }
     
     public static void ejercicio1() {
@@ -206,11 +213,9 @@ public class Practico5 {
         Paciente p1 = new Paciente("Ana Pérez", "OSDE");
         Paciente p2 = new Paciente("Luis Gómez","Swiss Medical");
         Paciente p3 = new Paciente("María Ruiz","Galeno");
-
         Profesional pr1 = new Profesional("Dra. López", "Clínica");
-        Profesional pr2 = new Profesional("Dr. Pérez",  "Cardiología");
-        Profesional pr3 = new Profesional("Dra. Sosa",  "Dermatología");
-
+        Profesional pr2 = new Profesional("Dr. Pérez", "Cardiología");
+        Profesional pr3 = new Profesional("Dra. Sosa", "Dermatología");
         CitaMedica c1 = new CitaMedica("2025-10-01", "09:00", p1, pr1);
         CitaMedica c2 = new CitaMedica("2025-10-01", "10:30", p2, pr2);
         CitaMedica c3 = new CitaMedica("2025-10-02", "11:15", p3, pr3);
@@ -218,5 +223,40 @@ public class Practico5 {
         System.out.println(c1);
         System.out.println(c2);
         System.out.println(c3);
+    }
+    
+    public static void ejercicio10() {
+        System.out.println("===== EJERCICIO 10 =====");
+        ClaveSeguridad k1 = new ClaveSeguridad("ABC123", "2025-09-01");
+        ClaveSeguridad k2 = new ClaveSeguridad("DEF456", "2025-09-02");
+        ClaveSeguridad k3 = new ClaveSeguridad("GHI789", "2025-09-03");
+        CuentaBancaria cb1 = new CuentaBancaria("000-111-222-1", 100000.0, k1);
+        CuentaBancaria cb2 = new CuentaBancaria("000-111-222-2", 50000.0, k2);
+        CuentaBancaria cb3 = new CuentaBancaria("000-111-222-3", 250000.0, k3);
+        Ejercicio10.Titular t1 = new Ejercicio10.Titular("Emmanuel Rivero", "30.111.222");
+        Ejercicio10.Titular t2 = new Ejercicio10.Titular("Menta Rivero", "30.999.888");
+        Ejercicio10.Titular t3 = new Ejercicio10.Titular("María E. Conte", "28.987.654");
+        cb1.setTitular(t1);
+        cb2.setTitular(t2);
+        cb3.setTitular(t3);
+        System.out.println(cb1);
+        System.out.println(cb2);
+        System.out.println(cb3);
+        System.out.println(t1);
+        System.out.println(t2);
+        System.out.println(t3);
+    }
+    
+    public static void ejercicio11() {
+        System.out.println("===== EJERCICIO 11 =====");
+        Artista ar1 = new Artista("Gustavo Cerati", "Rock");
+        Artista ar2 = new Artista("Mercedes Sosa", "Folclore");
+        Cancion c1 = new Cancion("Crimen", ar1);
+        Cancion c2 = new Cancion("De música ligera", ar1);
+        Cancion c3 = new Cancion("Gracias a la vida", ar2);
+        Reproductor rep = new Reproductor();
+        rep.reproducir(c1);
+        rep.reproducir(c2);
+        rep.reproducir(c3);
     }
 }
