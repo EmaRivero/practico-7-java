@@ -15,6 +15,16 @@ import Ejercicio4.TarjetaDeCredito;
 import Ejercicio5.Computadora;
 import Ejercicio5.PlacaMadre;
 import Ejercicio5.Propietario;
+import Ejercicio6.Mesa;
+import Ejercicio6.Reserva;
+import Ejercicio7.Conductor;
+import Ejercicio7.Motor;
+import Ejercicio7.Vehiculo;
+import Ejercicio8.Documento;
+import Ejercicio8.FirmaDigital;
+import Ejercicio9.CitaMedica;
+import Ejercicio9.Paciente;
+import Ejercicio9.Profesional;
 
 /**
  *
@@ -30,6 +40,7 @@ public class Practico5 {
         ejercicio6();
         ejercicio7();
         ejercicio8();
+        ejercicio9();
     }
     
     public static void ejercicio1() {
@@ -138,15 +149,15 @@ public class Practico5 {
     
     public static void ejercicio6() {
         System.out.println("===== EJERCICIO 6 =====");
-        Ejercicio6.Mesa m1 = new Ejercicio6.Mesa(1, 4);
-        Ejercicio6.Mesa m2 = new Ejercicio6.Mesa(2, 2);
-        Ejercicio6.Mesa m3 = new Ejercicio6.Mesa(3, 6);
+        Mesa m1 = new Mesa(1, 4);
+        Mesa m2 = new Mesa(2, 2);
+        Mesa m3 = new Mesa(3, 6);
         Ejercicio6.Cliente c1 = new Ejercicio6.Cliente("Emmanuel Rivero",   "11-2222-3333");
         Ejercicio6.Cliente c2 = new Ejercicio6.Cliente("Pepe Gómez",  "11-4444-5555");
         Ejercicio6.Cliente c3 = new Ejercicio6.Cliente("Mauricio Gomez",  "11-6666-7777");
-        Ejercicio6.Reserva r1 = new Ejercicio6.Reserva("2025-09-20", "20:30", c1, m1);
-        Ejercicio6.Reserva r2 = new Ejercicio6.Reserva("2025-09-21", "21:00", c2, m2);
-        Ejercicio6.Reserva r3 = new Ejercicio6.Reserva("2025-09-22", "21:30", c3, m3);
+        Reserva r1 = new Reserva("2025-09-20", "20:30", c1, m1);
+        Reserva r2 = new Reserva("2025-09-21", "21:00", c2, m2);
+        Reserva r3 = new Reserva("2025-09-22", "21:30", c3, m3);
         System.out.println(r1);
         System.out.println(r2);
         System.out.println(r3);
@@ -154,15 +165,15 @@ public class Practico5 {
     
     public static void ejercicio7() {
         System.out.println("===== EJERCICIO 7 =====");
-        Ejercicio7.Motor m1 = new Ejercicio7.Motor("Nafta", "M-0001");
-        Ejercicio7.Motor m2 = new Ejercicio7.Motor("Eléctrico", "M-0002");
-        Ejercicio7.Motor m3 = new Ejercicio7.Motor("Diésel", "M-0003");
-        Ejercicio7.Vehiculo v1 = new Ejercicio7.Vehiculo("AB123CD", "Ford Focus", m1);
-        Ejercicio7.Vehiculo v2 = new Ejercicio7.Vehiculo("AC234DE", "Tesla Model 3", m2);
-        Ejercicio7.Vehiculo v3 = new Ejercicio7.Vehiculo("AD345EF", "Hilux", m3);
-        Ejercicio7.Conductor c1 = new Ejercicio7.Conductor("Emmanuel Rivero", "B123456");
-        Ejercicio7.Conductor c2 = new Ejercicio7.Conductor("Albahaca Rivero", "B654321");
-        Ejercicio7.Conductor c3 = new Ejercicio7.Conductor("María E. Conte", "C777777");
+        Motor m1 = new Motor("Nafta", "M-0001");
+        Motor m2 = new Motor("Eléctrico", "M-0002");
+        Motor m3 = new Motor("Diésel", "M-0003");
+        Vehiculo v1 = new Vehiculo("AB123CD", "Ford Focus", m1);
+        Vehiculo v2 = new Vehiculo("AC234DE", "Tesla Model 3", m2);
+        Vehiculo v3 = new Vehiculo("AD345EF", "Hilux", m3);
+        Conductor c1 = new Conductor("Emmanuel Rivero", "B123456");
+        Conductor c2 = new Conductor("Albahaca Rivero", "B654321");
+        Conductor c3 = new Conductor("María E. Conte", "C777777");
         v1.setConductor(c1);
         v2.setConductor(c2);
         v3.setConductor(c3);
@@ -179,14 +190,33 @@ public class Practico5 {
         Ejercicio8.Usuario u1 = new Ejercicio8.Usuario("Emmannuel Rivero",  "emmanuel@correo.com");
         Ejercicio8.Usuario u2 = new Ejercicio8.Usuario("Silvia Corradi", "silvia@correo.com");
         Ejercicio8.Usuario u3 = new Ejercicio8.Usuario("María Eugenia Conte", "maria@correo.com");
-        Ejercicio8.FirmaDigital f1 = new Ejercicio8.FirmaDigital("H-001", "2025-09-01", u1);
-        Ejercicio8.FirmaDigital f2 = new Ejercicio8.FirmaDigital("H-002", "2025-09-02", u2);
-        Ejercicio8.FirmaDigital f3 = new Ejercicio8.FirmaDigital("H-003", "2025-09-03", u3);
-        Ejercicio8.Documento d1 = new Ejercicio8.Documento("Contrato A", "Contenido...", f1);
-        Ejercicio8.Documento d2 = new Ejercicio8.Documento("Contrato B", "Contenido...", f2);
-        Ejercicio8.Documento d3 = new Ejercicio8.Documento("Contrato C", "Contenido...", f3);
+        FirmaDigital f1 = new FirmaDigital("H-001", "2025-09-01", u1);
+        FirmaDigital f2 = new FirmaDigital("H-002", "2025-09-02", u2);
+        FirmaDigital f3 = new FirmaDigital("H-003", "2025-09-03", u3);
+        Documento d1 = new Documento("Contrato A", "Contenido...", f1);
+        Documento d2 = new Documento("Contrato B", "Contenido...", f2);
+        Documento d3 = new Documento("Contrato C", "Contenido...", f3);
         System.out.println(d1);
         System.out.println(d2);
         System.out.println(d3);
+    }
+    
+    public static void ejercicio9() {
+        System.out.println("===== EJERCICIO 9 =====");
+        Paciente p1 = new Paciente("Ana Pérez", "OSDE");
+        Paciente p2 = new Paciente("Luis Gómez","Swiss Medical");
+        Paciente p3 = new Paciente("María Ruiz","Galeno");
+
+        Profesional pr1 = new Profesional("Dra. López", "Clínica");
+        Profesional pr2 = new Profesional("Dr. Pérez",  "Cardiología");
+        Profesional pr3 = new Profesional("Dra. Sosa",  "Dermatología");
+
+        CitaMedica c1 = new CitaMedica("2025-10-01", "09:00", p1, pr1);
+        CitaMedica c2 = new CitaMedica("2025-10-01", "10:30", p2, pr2);
+        CitaMedica c3 = new CitaMedica("2025-10-02", "11:15", p3, pr3);
+
+        System.out.println(c1);
+        System.out.println(c2);
+        System.out.println(c3);
     }
 }
