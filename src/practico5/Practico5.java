@@ -29,6 +29,7 @@ public class Practico5 {
         ejercicio5();
         ejercicio6();
         ejercicio7();
+        ejercicio8();
     }
     
     public static void ejercicio1() {
@@ -171,5 +172,21 @@ public class Practico5 {
         System.out.println(c1);
         System.out.println(c2);
         System.out.println(c3);
+    }
+    
+    public static void ejercicio8() {
+        System.out.println("===== EJERCICIO 8 =====");
+        Ejercicio8.Usuario u1 = new Ejercicio8.Usuario("Emmannuel Rivero",  "emmanuel@correo.com");
+        Ejercicio8.Usuario u2 = new Ejercicio8.Usuario("Silvia Corradi", "silvia@correo.com");
+        Ejercicio8.Usuario u3 = new Ejercicio8.Usuario("María Eugenia Conte", "maria@correo.com");
+        Ejercicio8.FirmaDigital f1 = new Ejercicio8.FirmaDigital("H-001", "2025-09-01", u1);
+        Ejercicio8.FirmaDigital f2 = new Ejercicio8.FirmaDigital("H-002", "2025-09-02", u2);
+        Ejercicio8.FirmaDigital f3 = new Ejercicio8.FirmaDigital("H-003", "2025-09-03", u3);
+        Ejercicio8.Documento d1 = new Ejercicio8.Documento("Contrato A", "Contenido...", f1);
+        Ejercicio8.Documento d2 = new Ejercicio8.Documento("Contrato B", "Contenido...", f2);
+        Ejercicio8.Documento d3 = new Ejercicio8.Documento("Contrato C", "Contenido...", f3);
+        System.out.println(d1);
+        System.out.println(d2);
+        System.out.println(d3);
     }
 }
