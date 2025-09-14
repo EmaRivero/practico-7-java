@@ -8,6 +8,9 @@ import Ejercicio10.CuentaBancaria;
 import Ejercicio11.Artista;
 import Ejercicio11.Cancion;
 import Ejercicio11.Reproductor;
+import Ejercicio12.Calculadora;
+import Ejercicio12.Contribuyente;
+import Ejercicio12.Impuesto;
 import Ejercicio2.Bateria;
 import Ejercicio2.Celular;
 import Ejercicio2.Usuario;
@@ -48,6 +51,7 @@ public class Practico5 {
         ejercicio9();
         ejercicio10();
         ejercicio11();
+        ejercicio12();
     }
     
     public static void ejercicio1() {
@@ -258,5 +262,19 @@ public class Practico5 {
         rep.reproducir(c1);
         rep.reproducir(c2);
         rep.reproducir(c3);
+    }
+    
+    public static void ejercicio12() {
+        System.out.println("===== EJERCICIO 12 =====");
+        Contribuyente ct1 = new Contribuyente("Emmanuel Rivero",  "27-12345678-9");
+        Contribuyente ct2 = new Contribuyente("Jose Gómez","20-23456789-0");
+        Contribuyente ct3 = new Contribuyente("María Eugenia Conte","27-34567890-1");
+        Impuesto imp1 = new Impuesto(100_000, ct1);
+        Impuesto imp2 = new Impuesto(50_000, ct2);
+        Impuesto imp3 = new Impuesto(250_000, ct3);
+        Calculadora calc = new Calculadora();
+        calc.calcular(imp1);
+        calc.calcular(imp2);
+        calc.calcular(imp3);
     }
 }

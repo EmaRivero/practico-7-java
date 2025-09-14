@@ -13,8 +13,13 @@ public class Artista {
         this.genero = genero;
     }
 
-    public String getNombre() { return nombre; }
-    public String getGenero() { return genero; }
+    public String getNombre() { 
+        return nombre; 
+    }
+    
+    public String getGenero() { 
+        return genero; 
+    }
 
     @Override
     public String toString() {
