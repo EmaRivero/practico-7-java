@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Ejercicio13;
 
 /**
@@ -9,5 +5,13 @@ package Ejercicio13;
  * @author emmanuelrivero
  */
 public class GeneradorQR {
-    
+
+    public void generar(String valor, Usuario usuario) {
+        if (valor == null || valor.isBlank()) {
+            System.out.println("Valor inválido para el QR.");
+            return;
+        }
+        CodigoQR qr = new CodigoQR(valor, usuario);
+        System.out.println("QR generado -> " + qr);
+    }
 }

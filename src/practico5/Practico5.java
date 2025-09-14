@@ -11,6 +11,8 @@ import Ejercicio11.Reproductor;
 import Ejercicio12.Calculadora;
 import Ejercicio12.Contribuyente;
 import Ejercicio12.Impuesto;
+import Ejercicio14.EditorVideo;
+import Ejercicio14.Proyecto;
 import Ejercicio2.Bateria;
 import Ejercicio2.Celular;
 import Ejercicio2.Usuario;
@@ -52,6 +54,8 @@ public class Practico5 {
         ejercicio10();
         ejercicio11();
         ejercicio12();
+        ejercicio13();
+        ejercicio14();
     }
     
     public static void ejercicio1() {
@@ -277,4 +281,27 @@ public class Practico5 {
         calc.calcular(imp2);
         calc.calcular(imp3);
     }
+    
+    public static void ejercicio13() {
+        System.out.println("===== EJERCICIO 13 =====");
+        Ejercicio13.Usuario u1 = new Ejercicio13.Usuario("Eemmanuel Rivero",  "emmanuel@correo.com");
+        Ejercicio13.Usuario u2 = new Ejercicio13.Usuario("Albahaca Rivero", "albahaca@correo.com");
+        Ejercicio13.Usuario u3 = new Ejercicio13.Usuario("María Eugenia Conte", "maria@correo.com");
+        Ejercicio13.GeneradorQR gen = new Ejercicio13.GeneradorQR();
+        gen.generar("INV-001-2025", u1);
+        gen.generar("INV-002-2025", u2);
+        gen.generar("INV-003-2025", u3);
+    }
+    
+    public static void ejercicio14() {
+        System.out.println("===== EJERCICIO 14 =====");
+        Proyecto pr1 = new Proyecto("Corto A", 12);
+        Proyecto pr2 = new Proyecto("Corto B", 8);
+        Ejercicio14.Proyecto pr3 = new Proyecto("Docu C",  45);
+        EditorVideo editor = new EditorVideo();
+        editor.exportar("mp4", pr1);
+        editor.exportar("mov", pr2);
+        editor.exportar("mkv", pr3);
+    }
+
 }
